@@ -1,0 +1,66 @@
+package pages;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import util.WebUtil;
+
+public class ESanchit {
+
+	
+	public WebUtil webUtilObj;
+
+	public ESanchit(WebUtil webUtilObj) {
+
+		PageFactory.initElements(webUtilObj.driver, this);
+		this.webUtilObj = webUtilObj;
+	}
+	
+	
+	
+
+	@FindBy(xpath = "//button[@id='modal']")
+	WebElement upLoadDoc;
+	
+	@FindBy(xpath = "//input[@id='fileIn']")
+	WebElement chooseFile;
+	
+	@FindBy(xpath = "//input[@id='uploadSubmit']")
+	WebElement uploadDoc;
+	
+	@FindBy(xpath = "//h4[text()='Upload Documents']")
+	WebElement headerText; 
+	
+	public void eSanchitHome() {
+		
+		String titleESanchit=webUtilObj.getTitle();
+		System.out.println("eSancit home- "+titleESanchit);
+		
+		
+		
+		webUtilObj.click(upLoadDoc, "Upload Button");
+	//	webUtilObj.getText(headerText);
+		// Combine all file paths with \n
+//		String filePaths = "C:\\Users\\akaash\\OneDrive\\Pictures\\10620663145569965903.jpg\n"
+//		                 + "C:\\Users\\akash\\Downloads\\OIP.jpg\n"
+//		                 + "C:\\Users\\akash\\Downloads\\OIP (1).jpg";
+		String filePaths = "C:\\Users\\user\\Downloads\\Supplier_Form_Field_Test_Cases.pdf";
+		webUtilObj.inputValue(chooseFile, filePaths, "Choose multiple files");
+
+		WebDriverWait wait = new WebDriverWait(webUtilObj.driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(uploadDoc));
+
+		// Click the upload file button
+		webUtilObj.click(uploadDoc, "upload file");
+		
+	}
+	
+	
+	
+	
+}

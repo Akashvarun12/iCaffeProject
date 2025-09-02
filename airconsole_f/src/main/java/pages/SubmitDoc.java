@@ -1,0 +1,37 @@
+package pages;
+
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
+import org.openqa.selenium.support.PageFactory;
+
+import util.WebUtil;
+
+public class SubmitDoc {
+
+	
+	public WebUtil webUtilObj;
+
+	public SubmitDoc(WebUtil webUtilObj) {
+
+		PageFactory.initElements(webUtilObj.driver, this);
+		this.webUtilObj = webUtilObj;
+	}
+	
+	
+	@FindBy(xpath = "//button[@id='submitDocs']")
+	WebElement submit;
+
+	public void documentTypeSubmit() {
+		
+		
+		
+		webUtilObj.click(submit, "submit");
+		
+	}
+	
+
+	
+}

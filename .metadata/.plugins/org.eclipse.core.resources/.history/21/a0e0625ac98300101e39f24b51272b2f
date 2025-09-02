@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-19T12:24:47 IST" name="Surefire suite" finished-at="2025-08-19T12:24:55 IST" duration-ms="7533">
+    <groups>
+    </groups>
+    <test started-at="2025-08-19T12:24:47 IST" name="Surefire test" finished-at="2025-08-19T12:24:55 IST" duration-ms="7533">
+      <class name="testcases.AirConsoleLoginTestCase">
+        <test-method is-config="true" signature="beforeSuit()[pri:0, instance:testcases.AirConsoleLoginTestCase@5db250b4]" started-at="2025-08-19T12:24:47 IST" name="beforeSuit" finished-at="2025-08-19T12:24:47 IST" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuit -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:testcases.AirConsoleLoginTestCase@5db250b4]" started-at="2025-08-19T12:24:47 IST" name="beforeClass" finished-at="2025-08-19T12:24:50 IST" duration-ms="2904" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testcases.AirConsoleLoginTestCase@5db250b4]" started-at="2025-08-19T12:24:50 IST" name="beforeMethod" finished-at="2025-08-19T12:24:52 IST" duration-ms="2498" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="loginTestCase()[pri:0, instance:testcases.AirConsoleLoginTestCase@5db250b4]" started-at="2025-08-19T12:24:52 IST" name="loginTestCase" finished-at="2025-08-19T12:24:55 IST" duration-ms="2082" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestCase -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testcases.AirConsoleLoginTestCase@5db250b4]" started-at="2025-08-19T12:24:55 IST" name="afterMethod" finished-at="2025-08-19T12:24:55 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:testcases.AirConsoleLoginTestCase@5db250b4]" started-at="2025-08-19T12:24:55 IST" name="afterClass" finished-at="2025-08-19T12:24:55 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterSuit()[pri:0, instance:testcases.AirConsoleLoginTestCase@5db250b4]" started-at="2025-08-19T12:24:55 IST" name="afterSuit" finished-at="2025-08-19T12:24:55 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuit -->
+      </class> <!-- testcases.AirConsoleLoginTestCase -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

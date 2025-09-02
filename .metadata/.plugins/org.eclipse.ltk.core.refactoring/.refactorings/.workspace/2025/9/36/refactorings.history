@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Copy Project &apos;framework.final&apos;" description="Copy Project &apos;framework.final&apos;" destination="C:/Users/user/eclipse-workspace" element="/framework.final" flags="7" id="org.eclipse.ltk.core.refactoring.copyproject.resource" name="iCaffe" stamp="1756810367529"/>&#x0A;<refactoring comment="Rename resource &apos;icaffeproject&apos; to &apos;icaffeproject_old&apos;" description="Rename resource &apos;icaffeproject&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/icaffeproject" name="icaffeproject_old" stamp="1756812164430" updateReferences="true"/>
+</session>

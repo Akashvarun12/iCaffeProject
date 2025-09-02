@@ -1,0 +1,66 @@
+package pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import util.WebUtil;
+
+public class ESanchit {
+
+	
+	public WebUtil webUtilObj;
+
+	public ESanchit(WebUtil webUtilObj) {
+
+		PageFactory.initElements(webUtilObj.driver, this);
+		this.webUtilObj = webUtilObj;
+	}
+	
+	
+	
+
+	@FindBy(xpath = "//button[@id='modal']")
+	WebElement upLoadDoc;
+	
+	@FindBy(xpath = "//input[@id='fileIn']")
+	WebElement chooseFile;
+	
+	@FindBy(xpath = "//input[@id='uploadSubmit']")
+	WebElement uploadDoc;
+	
+	@FindBy(xpath = "//h4[text()='Upload Documents']")
+	WebElement headerText; 
+	
+	@FindBy(xpath = "//select[@id='docTypeSelect_0']//option")
+	WebElement docselect; 
+	
+	
+	public void eSanchitHome() {
+		
+		String titleESanchit=webUtilObj.getTitle();
+		System.out.println("eSancit home- "+titleESanchit);
+		
+		
+		
+		webUtilObj.click(upLoadDoc, "Upload Button");
+		webUtilObj.getText(headerText);
+		webUtilObj.inputValue(chooseFile, "C:\\Users\\user\\Downloads\\Supplier_Form_Field_Test_Cases.pdf","Choose file");
+		
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		webUtilObj.click(uploadDoc, "upload file");
+		webUtilObj.selectByVisibleText(docselect,"001003-Blood Analysis Report");
+		
+		//td[contains(@class,'tdText tdText')]
+		
+	}
+	
+	
+	
+	
+}

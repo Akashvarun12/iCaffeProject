@@ -1,0 +1,64 @@
+package testcases;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+import basepage.BasePage;
+import pages.DocAccept;
+import pages.ESanchit;
+import pages.ESanchitHome;
+import pages.HomePage;
+
+public class AirConsoleLoginTestCase extends BasePage {
+
+	@Test
+	public void loginTestCase() {
+
+		HomePage homeObj = new HomePage(utilObj);
+		homeObj.HomePageDetails();
+
+		ESanchit esanobj = new ESanchit(utilObj);
+		esanobj.eSanchitHome();
+
+		ESanchitHome esanhoobj = new ESanchitHome(utilObj);
+		esanhoobj.documentTypeSelect();
+		esanhoobj.documentTypeSubmit();
+
+		DocAccept docObj = new DocAccept(utilObj);
+		docObj.docAccept();
+		
+		// Get all rows (excluding header if needed)
+		List<WebElement> rows = utilObj.driver.findElements(By.xpath("//table//tr"));
+
+		for (WebElement row : rows) {
+			// Get all cells for this row
+			List<WebElement> cells = row.findElements(By.tagName("td"));
+
+			for (WebElement cell : cells) {
+				String textWe = cell.getText().trim();
+				if (!textWe.isEmpty()) {
+					System.out.print(textWe + " | ");
+				} else {
+					try {
+						WebElement inputEle = cell.findElement(By.tagName("input"));
+						String inputValue = inputEle.getAttribute("value");
+						System.out.print(inputValue + " | ");
+					} catch (NoSuchElementException e) {
+						System.out.print("EMPTY | ");
+					}
+				}
+			}
+			System.out.println(); // New line after each row
+		}
+
+		// SubmitDoc subobj = new SubmitDoc(utilObj);
+
+		// Logout loobj = new Logout(utilObj);
+		// loobj.logout();
+	}
+
+}
