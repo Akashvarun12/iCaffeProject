@@ -1,0 +1,25 @@
+package icaffetestcases;
+
+import basetest.BaseTest;
+
+public class ICaffeMastersTestcase extends BaseTest {
+
+	
+	
+	public void verifyMasterPartyExporter() {
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}
