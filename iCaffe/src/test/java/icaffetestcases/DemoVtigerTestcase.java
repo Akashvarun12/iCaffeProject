@@ -2,8 +2,8 @@ package icaffetestcases;
 
 import org.testng.annotations.Test;
 
-import demobasetest.BaseTest;
-import demobasetest.BaseTestForLogin;
+import basetest.BaseTest;
+import basetest.BaseTestForLogin;
 import login.ApplicationLogin;
 import webutil.ExcelDataSuplier;
 import webutil.WebUtil;
